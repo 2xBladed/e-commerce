@@ -1,6 +1,8 @@
 # E-commerce
 
-Um e-commerce feito com flask.
+Chamar isso de e-commerce é exagero.
+
+Feito em python com flask.
 
 ## Setup
 
