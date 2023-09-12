@@ -6,7 +6,32 @@
     <title>{% block title %}titulo da aba{% endblock %}</title>
   </head>
   <body>
+
     <table>
+
+      {% if user.is_authenticated %}
+      <tr>
+        <td>
+          <a class="nav-item nav-link" id="home" href="/home"
+            ><big>Página inicial</big></a
+          >
+        </td>
+        <td>&nbsp;&nbsp;&nbsp;</td>
+        <td>
+          <a class="nav-item nav-link" id="carrinho" href="/carrinho"
+            ><big>Carrinho</big></a
+          >
+        </td>
+        <td>&nbsp;&nbsp;&nbsp;</td>
+        <td>
+          <a class="nav-item nav-link" id="logout" href="/logout"
+            ><big>Sair</big></a
+          >
+        </td>
+      </tr>
+      </table>
+
+      {% else %}
       <tr>
         <td>
           <a class="nav-item nav-link" id="home" href="/home"
@@ -25,14 +50,20 @@
             ><big>Cadraste-se</big></a
           >
         </td>
-        <td>&nbsp;&nbsp;&nbsp;</td>
-        <td>
-          <a class="nav-item nav-link" id="logout" href="/logout"
-            ><big>Sair</big></a
-          >
-        </td>
-      </tr>
-    </table>
+      </table>
+
+      {% endif %}
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for message in messages %}
+        <div>
+          {{ message[0] + ':' + ' ' + message[1] }}
+        </div>
+      {% endfor %}
+    {% endif %}
+    {% endwith %}
+
     <div class="container">
       {% block content %}{% endblock %}
     </div>

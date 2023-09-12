@@ -1,2 +1,40 @@
-{% extends "base.html" %} {% block title %}Login{% endblock %}
-{% block content %}Login page{% endblock %}
+{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content
+%}
+<form method="POST">
+  <h1 align="center">Acesse a sua conta</h1>
+  <table align="center">
+    <tr>
+      <td>
+        <div class="form-group">
+          <label for="username">Nome de usuário:</label>
+          <input
+            type="username"
+            class="form-control"
+            id="username"
+            name="username"
+            placeholder="Insira o nome de usuário"
+          />
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="form-group">
+          <label for="senha1">Senha:</label>
+          <input
+            type="senha"
+            class="form-control"
+            id="senha"
+            name="senha"
+            placeholder="Insira a senha"
+          />
+        </div>
+      </td>
+    </tr>
+  </table>
+  <br />
+  <div align="center">
+    <button type="submit" class="btn">Entrar</button>
+  </div>
+</form>
+{% endblock %}
