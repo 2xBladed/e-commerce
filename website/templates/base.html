@@ -8,11 +8,33 @@
   <body>
     <table>
       <tr>
-        <td><a class="nav-item nav-link" id="home" href="/home"><big>Home</big></a></td>
-        <td><a class="nav-item nav-link" id="login" href="/login"><big>Login</big></a></td>
-        <td><a class="nav-item nav-link" id="signUp" href="/sign-up"><big>Sign Up</big></a></td>
-        <td><a class="nav-item nav-link" id="logout" href="/logout"><big>Logout</big></a></td>
+        <td>
+          <a class="nav-item nav-link" id="home" href="/home"
+            ><big>Página inicial</big></a
+          >
+        </td>
+        <td>&nbsp;&nbsp;&nbsp;</td>
+        <td>
+          <a class="nav-item nav-link" id="login" href="/login"
+            ><big>Entrar</big></a
+          >
+        </td>
+        <td>&nbsp;&nbsp;&nbsp;</td>
+        <td>
+          <a class="nav-item nav-link" id="signUp" href="/sign-up"
+            ><big>Cadraste-se</big></a
+          >
+        </td>
+        <td>&nbsp;&nbsp;&nbsp;</td>
+        <td>
+          <a class="nav-item nav-link" id="logout" href="/logout"
+            ><big>Sair</big></a
+          >
+        </td>
       </tr>
     </table>
+    <div class="container">
+      {% block content %}{% endblock %}
+    </div>
   </body>
 </html>

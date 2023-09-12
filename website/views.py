@@ -9,4 +9,4 @@ def welcome():
 
 @views.route('/home')
 def home():
-    return "<h1> home page </h1>"
+    return render_template('home.html')
